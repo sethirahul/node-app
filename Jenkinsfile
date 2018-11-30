@@ -13,7 +13,7 @@ pipeline {
     stage('Create Packer AMI') {
         steps {
           withCredentials([
-            usernamePassword(passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY')
+            usernamePassword(credentialsId: 'Mylogin', passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY')
           ]) {
             sh 'packer build -var aws_access_key=${AWS_KEY} -var aws_secret_key=${AWS_SECRET} packer/packer.json'
         }
@@ -22,8 +22,8 @@ pipeline {
     stage('AWS Deployment') {
       steps {
           withCredentials([
-            usernamePassword(passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY'),
-            usernamePassword(passwordVariable: 'REPO_PASS', usernameVariable: 'REPO_USER'),
+            usernamePassword(credentialsId: 'Mylogin', passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY'),
+            usernamePassword(credentialsId: 'Mygithub', passwordVariable: 'REPO_PASS', usernameVariable: 'REPO_USER'),
           ]) {
             sh 'rm -rf node-app-terraform'
             sh 'git clone https://github.com/kanojia26/node-app-terraform.git'
