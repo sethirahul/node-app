@@ -35,7 +35,7 @@
     "region": "us-east-1",
     "source_ami_filter": {
       "filters": {
-        "virtualization-type": "hvm-ssd",
+        "virtualization-type": "hvm",
         "name": "ubuntu/images/hvm-ssd/*ubuntu-xenial-16.04-amd64-server-*",
         "root-device-type": "ebs"
       },
