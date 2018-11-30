@@ -37,7 +37,7 @@
       "filters": {
         "virtualization-type": "hvm",
         "name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*",
-        "root-device-type": "ebs"
+        "root-device-type": "ebs-ssd"
       },
       "owners": ["873657852612"],
       "most_recent": true
