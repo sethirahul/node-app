@@ -36,8 +36,8 @@
     "source_ami_filter": {
       "filters": {
         "virtualization-type": "hvm",
-        "name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*",
-        "root-device-type": "ebs-ssd"
+        "name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-2018*",
+        "root-device-type": "ebs"
       },
       "owners": ["873657852612"],
       "most_recent": true
