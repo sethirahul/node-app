@@ -26,7 +26,7 @@ pipeline {
             usernamePassword(credentialsId: 'Mygithub', passwordVariable: 'REPO_PASS', usernameVariable: 'REPO_USER'),
           ]) {
             sh 'rm -rf node-app-terraform'
-            sh 'git clone https://github.com/kanojia26/node-app-terraform.git'
+            sh 'git clone https://github.com/sethirahul/node-app-terraform.git'
             sh '''
                cd node-app-terraform
                terraform init
