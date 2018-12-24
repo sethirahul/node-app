@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:latest'
+      image 'abhishek2017/node-app-pac:latest'
     }
   }
   stages {
